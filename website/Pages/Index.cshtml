@@ -3,8 +3,72 @@
 @{
     ViewData["Title"] = "Home page";
 }
+<body>
+<header>   
+<h1>Sajanpreet Singh</h1>
+</header>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<h2>About me</h2>
+<p>My name is Sajanpreet Singh and I am 20 years old. I live with my parents, grandparents and younger brother 
+    in village thikriwala district Barnala, India. My father's name is Jagsir Singh, he is a farmer and my mother's name is 
+    Rupinder Kaur, she is housewife.</p>
+
+<h2>Family Background</h2>
+<p>My father's name is Jagsir Singh, he is a farmer and my mother's name is Rupinder Kaur, she is housewife. My brother 
+    recently completed his secendary school education.</p>
+
+<h2>Qualfication</h2>
+<p> 
+I have passed my secondary education and high school education from Jai Vatika Public School Barnala, I opted 
+ Non-Medical Stream due to my interest in innovation technology as I aspire to build a strong base for my
+ further education in the technical stream. Further continuing my study in St. Clair College.</p>
+
+<h2>Work Experience</h2>
+<p>I don't have any work experience but I like to help my father and mother in their work so, I know few things about
+    farming and cooking. </p>
+
+<h2>Why I opted this Program</h2>
+<blockquote>I have a keen interest in coding. My aim is to grab knowledge of technology. This program gives oppertunity for practical work.
+    Moreover there are numerous job oppertunities for web developer, beside this a person gets a chance to start new venture. </blockquote>
+
+</body>
+</html>
+@{
+  var hobbies=new[]{
+    new{
+      name="Sports",
+      type="Outdoor Sports,Indoor Sports",
+      favourite="Soccer"
+    },
+    new{
+      name="Travelling",
+      type="Hilly area,historial places",
+      favourite="Hilly area"
+      
+    },
+    new{
+      name="I like to read books",
+      type="Fiction,Story",
+      favourite="Fiction"
+       
+    },
+    new{
+      name ="I Like to listen Music",
+      type="Punjabi music,Pop music",
+      favourite="Punjabi"
+       
+    },
+    new{
+      name="I like to watch Movies",
+      type="Sci-fiction,Horror,Comedy",
+      favourite="Fiction"
+      
+    }
+    
+  };
+}
+@for(var i=0;i<hobbies.Length;i++){
+  var hobbiesname=hobbies[i];
+  <ul><li>@hobbiesname.name </li></ul> 
+  <ul><text>My Favourtie : <b>@hobbiesname.favourite</b> </text></ul>
+}
